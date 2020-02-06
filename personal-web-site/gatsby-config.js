@@ -26,6 +26,18 @@ module.exports = {
         display: `minimal-ui` // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'GitHub',
+        fieldName: 'github',
+        url: 'https://api.github.com/graphql',
+        headers: {
+          Authorization: `Bearer 117a61e61001e76bfe81b37d777bd09b49b28093`,
+        },
+        fetchOptions: {},
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
