@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+body{
+  background-color: #141319;
+  color: #CCCBD4;
+  font-family: 'Lato', sans-serif;
+  font-size: calc(28px + 0.5vh + 1.5vw);
+  letter-spacing: -0.015em;
+  line-height: 1;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+}
+
+.typing{
+  padding: 40px;
+}
+.Cursor {
+  display: inline-block;
+  margin-left: 5px;
+  opacity: 1;
+  color:#FC8300;
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
