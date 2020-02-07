@@ -171,7 +171,6 @@ a, a:active, a:focus, a:hover{
 .name{
     font-weight: bold;
     color: #E2E1E2;
-    text-transform: capitalize;
     margin-bottom: 10px;
 }
 .description{
