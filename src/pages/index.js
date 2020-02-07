@@ -21,10 +21,10 @@ const IndexPage = ({data}) => {
 
     <div className="conntainer">
       <div className="sidebar">
-        <div className="instagram contact"></div>
-        <div className="github contact"></div>
-        <div className="mail contact"></div>
-        <div className="number contact"></div>
+        <div className="mail contact"><p className="number-m">MAIL</p><p className="mail-content"><a href="mailto: furkandemirturk@outlook.com">Click</a></p></div>
+        <div className="github contact"><p className="number-g">GITHUB</p><p className="github-content"><a target="_blank" href="https://github.com/fdmrtrk">Click</a></p></div>
+        <div className="instagram contact"><p className="number-i">INSTAGRAM</p><p className="instagram-content"><a target="_blank" href="https://www.instagram.com/furkandemirturk_/">Click</a></p></div>
+        <div className="number contact"><p className="number-p">NUMBER</p><p className="number-content">05549071702</p></div>
       </div>
       <div className="typing">
           <Typist 
@@ -43,7 +43,7 @@ const IndexPage = ({data}) => {
             <span className="hello-continue">Furkan Demirturk. </span>
             <Typist.Delay ms={500} />
             <br/>
-            <span className='develospaner'>I am Fullstack Javascript Develoer. 🤓😍 </span>
+            <span className='develospaner'>I am Fullstack Javascript Developer. 🤓😍 </span>
             <br/>
             <span className='portfolio'> You can see my portfolio from here.   👉 </span><span > <a className="clickme" href="#portfolio">Lets See </a></span>
           </Typist>

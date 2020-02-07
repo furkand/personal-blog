@@ -13,6 +13,10 @@ body{
 html{
   scroll-behavior: smooth;
 }
+a, a:active, a:focus, a:hover{
+  text-decoration: none;
+  color: white
+}
 
 .typing{
   padding-top: 120px;
@@ -31,7 +35,8 @@ html{
   height: 100vh;
 }
 .clickme{
-  color: rgb(255, 255, 255);
+  color: #E2E1E2;
+  border: 5px solid #E2E1E2;
   /* animation-name: portfolio-button; */
   background-position: 3rem ;
   background: repeating-linear-gradient(
@@ -66,9 +71,10 @@ html{
   from {background-position: 0px 0px;}
   to{background-position: -207px  -64px}
 }
-.clickme:focus, .clickme:active, .clickme:hover{
+.clickme:focus, .clickme:active, .clickme:hover, .clickme{
   outline: none;
   box-shadow: none;
+  text-decoration: none;
 }
 .sidebar{
   position:fixed;
@@ -78,7 +84,7 @@ html{
   width: 40px;
   
 }
-.instagram{
+.mail{
   height: 10vh;
   background-color: #312F68;
   
@@ -88,38 +94,65 @@ html{
   background-color: #4E235D;
   
 }
-.mail{
+.instagram{
   height: 30vh;
   background-color: #73FFF7;
-  
+  color: #312F68!important;
 }
 .number{
   height: 30vh;
-  
+  color: #4E235D!important;
   background-color: #FDDF36;
 }
 .instagram:hover{
-  width: 100px;
-  transition: 1s;
+  width: 400px;
+  transition: 0.5s;
 }
 .github:hover{
   width: 400px;
-  transition: 1s;
+  transition: 0.5s;
 }
 .mail:hover{
-  width: 300px;
-  transition: 1s;
+  width: 400px;
+  transition: 0.5s;
+ 
 }
 .number:hover{
-  width: 200px;
-  transition: 1s;
+  width: 400px;
+  transition: 0.5s;
+  
+}
+.number:hover .number-p {
+  text-orientation: sideways-right!important;
+  writing-mode: horizontal-tb!important;
 }
 .contact{
   display: block;
   float: right;
-  width: 40px;
-  text-align: center;
+  width: 30px;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  COLOR : #E2E1E2;
+}
+
+  .number-p, .number-m, .number-i, .number-g {
+  text-orientation: sideways-right;
+  writing-mode: vertical-rl;
+  margin-left: 0px;
+  padding-left: 0px;
+  display: inline-table;
+  float: left;
+  margin-right: 0px;
+  font-size: 17px;
+  padding: 0px;
+  width: 40px;
+  text-align: -webkit-right;
+  align-items: center;
+  font-weight: bold;
+  font-size:15px !important;
+  letter-spacing: 1px;
 
 }
 .repo-container{
@@ -159,4 +192,40 @@ html{
 }
 .stars{
   margin-top:20px;
+}
+.number-content, .github-content, .mail-content, .instagram-content{
+  display: none;
+}
+.number:hover .number-content {
+  display: block;
+  margin-left: 12px;
+}
+.github:hover .github-content {
+  display: block;
+  margin-left: 12px;
+}
+.github:hover .number-g {
+  text-orientation: sideways-right!important;
+  writing-mode: horizontal-tb!important;
+}
+.instagram:hover .instagram-content {
+  display: block;
+  margin-left: 12px;
+}
+
+.instagram:hover .number-i {
+  text-orientation: sideways-right!important;
+  writing-mode: horizontal-tb!important;
+}
+.mail:hover .mail-content {
+  display: block;
+  margin-left: 12px;
+}
+
+.mail:hover .number-m {
+  text-orientation: sideways-right!important;
+  writing-mode: horizontal-tb!important;
+}
+.mail-content , .instagram-content, .number-content , .github-content {
+  text-decoration: none;
 }
