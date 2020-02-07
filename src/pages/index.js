@@ -1,5 +1,6 @@
 import React, {createRef}from "react"
 import { Link, graphql } from "gatsby"
+import "../components/layout.css"
 import Typist from 'react-typist'
 import {Repostories} from "../components/Repostories"
 // import Layout from "../components/layout"
