@@ -19,18 +19,18 @@ const IndexPage = ({data}) => {
   const scrollInto = useRef(null)
   useEffect(() => {
     scrollInto.current.scrollIntoView()
-  })
+  },[])
 
   return(
 
-    <div className="conntainer" ref={scrollInto} >
+    <div className="conntainer"  >
       <div className="sidebar">
         <div className="mail contact"><p className="number-m">MAIL</p><p className="mail-content"><a href="mailto: furkandemirturk@outlook.com">Click</a></p></div>
         <div className="github contact"><p className="number-g">GITHUB</p><p className="github-content"><a target="_blank" href="https://github.com/fdmrtrk">Click</a></p></div>
         <div className="instagram contact"><p className="number-i">INSTAGRAM</p><p className="instagram-content"><a target="_blank" href="https://www.instagram.com/furkandemirturk_/">Click</a></p></div>
         <div className="number contact"><p className="number-p">NUMBER</p><p className="number-content">05549071702</p></div>
       </div>
-      <div className="typing">
+      <div className="typing" ref={scrollInto}>
           <Typist 
             startDelay={2000}  
             cursor={{ 
