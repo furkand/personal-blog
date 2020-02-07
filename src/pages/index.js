@@ -1,4 +1,4 @@
-import React, {createRef}from "react"
+import React, {createRef,useEffect, useRef}from "react"
 import { Link, graphql } from "gatsby"
 import "../components/layout.css"
 import Typist from 'react-typist'
@@ -16,10 +16,14 @@ const IndexPage = ({data}) => {
   let welcome = ' Good morning. 🌞 '
   if (isNoon) welcome = ' Good afternoon. 🌤 '
   else if (isEvening) welcome = ' Good evening. 🌙 '
+  const scrollInto = useRef(null)
+  useEffect(() => {
+    scrollInto.current.scrollIntoView()
+  })
 
   return(
 
-    <div className="conntainer">
+    <div className="conntainer" ref={scrollInto} >
       <div className="sidebar">
         <div className="mail contact"><p className="number-m">MAIL</p><p className="mail-content"><a href="mailto: furkandemirturk@outlook.com">Click</a></p></div>
         <div className="github contact"><p className="number-g">GITHUB</p><p className="github-content"><a target="_blank" href="https://github.com/fdmrtrk">Click</a></p></div>
