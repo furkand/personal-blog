@@ -195,6 +195,7 @@ a, a:active, a:focus, a:hover{
 }
 .number-content, .github-content, .mail-content, .instagram-content{
   display: none;
+  text-decoration: underline!important;
 }
 .number:hover .number-content {
   display: block;
@@ -211,6 +212,11 @@ a, a:active, a:focus, a:hover{
 .instagram:hover .instagram-content {
   display: block;
   margin-left: 12px;
+ 
+}
+.instagram-content a{
+  color: #312F68!important;
+  text-decoration: underline;
 }
 
 .instagram:hover .number-i {
@@ -228,4 +234,28 @@ a, a:active, a:focus, a:hover{
 }
 .mail-content , .instagram-content, .number-content , .github-content {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 580px) {
+  .typing{
+    padding-top: 40px;
+    padding-left: 10px;
+    height: 100vh;
+    line-height: 50px;
+    font-size: 30px;
+    padding-right: 10px;
+
+  }
+  .clickme{
+    font-size: 20px ;
+    margin-left: 8px;
+    border-radius: 5px;
+    border: 3px solid white;
+  }
+  .single-item{
+    width: 70%;
+    margin: auto;
+    display: table;
+    margin-top:10px;
+  }
 }
