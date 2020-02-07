@@ -1,45 +1,36 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+const getRepos = graphql`{
+    github {
+        viewer {
+        repositories(
+            first: 8
+            orderBy: { field: STARGAZERS, direction: DESC }
+            ) {
+        edges {
+            node {
+            id
+            name
+            url
+            description
+            stargazers {
+                totalCount
+            }
+            forkCount
+        }
+    }
+    }
+}
+}
+}`
 
 
 export const Repostories = () => {
-    const {
-            github: {
-            viewer: {
-                repositories: { edges },
-            },
-            },
-        } = useStaticQuery(
-            graphql`
-            {
-                github {
-                viewer {
-                    repositories(
-                    first: 8
-                    orderBy: { field: STARGAZERS, direction: DESC }
-                    ) {
-                    edges {
-                        node {
-                        id
-                        name
-                        url
-                        description
-                        stargazers {
-                            totalCount
-                        }
-                        forkCount
-                        }
-                    }
-                    }
-                }
-                }
-            }
-            `
-        )
-        console.log(edges)
-return (
-    <div className="repo-container">
-        {edges.map((item,index)=>(
+    
+return( <StaticQuery query={getRepos} render={data=>{
+    {console.log(data)}
+    return (<div className="repo-container">
+        {data.github.viewer.repositories.edges.map((item,index)=>(
             <div key={item.node.id} className="single-item">
                 <div className="name">{item.node.name}</div>
                 <div className="description">{item.node.description}</div>
@@ -49,6 +40,9 @@ return (
                 </a>
             </div>
         ))}
-    </div>
+    </div>)
+}}
+    />
 )
+
 }
