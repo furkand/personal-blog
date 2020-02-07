@@ -45,7 +45,7 @@ const IndexPage = ({data}) => {
             <br/>
             <span className='develospaner'>I am Fullstack Javascript Developer. 🤓😍 </span>
             <br/>
-            <span className='portfolio'> You can see my portfolio from here.   👉 </span><span > <a className="clickme" href="#portfolio">Lets See </a></span>
+            <span className='portfolio'> You can see my portfolio from here.    </span><span >👉 <a className="clickme" href="#portfolio">Lets See </a></span>
           </Typist>
       </div>
       <div ref={myRef}id="portfolio" className="portfolio-container">
